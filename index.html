@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رویا | مدیریت هوشمند، فروش بی‌نهایت</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a1a12;
+            --gold-color: #d4af37;
+            --gold-hover: #b8952b;
+            --text-light: #e0e0e0;
+            --text-muted: #a0a0a0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(10, 26, 18, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--gold-color);
+            letter-spacing: 2px;
+        }
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-right: 30px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--gold-color);
+        }
+        .btn {
+            background-color: var(--gold-color);
+            color: var(--bg-color);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn:hover {
+            background-color: var(--gold-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 80px;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.1) 0%, transparent 60%);
+            z-index: -1;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: var(--gold-color);
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+        .features-tagline {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold-color);
+            margin-bottom: 40px;
+            letter-spacing: 5px;
+        }
+        .features-section {
+            padding: 100px 50px;
+            text-align: center;
+        }
+        .features-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: var(--gold-color);
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 40px 20px;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-color: var(--gold-color);
+        }
+        .feature-card .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--gold-color);
+        }
+        .feature-card p {
+            color: var(--text-muted);
+        }
+        footer {
+            background: #06120c;
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        footer p {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+        .social-link {
+            color: var(--gold-color);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        .social-link:hover {
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; }
+            nav { display: none; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+            .features-tagline { font-size: 1.1rem; letter-spacing: 2px; }
+            .features-section { padding: 50px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-text">ROYA</div>
+        <nav>
+            <a href="#features">ویژگی‌ها</a>
+            <a href="#contact">ارتباط با ما</a>
+        </nav>
+        <a href="https://rubika.ir/taha_cs_2120" target="_blank" class="btn">خرید و دانلود</a>
+    </header>
+
+    <section class="hero">
+        <h1>رویا؛ مدیریت هوشمند، فروش بی‌نهایت! 🚀</h1>
+        <p>تمام آنچه برای حسابداری فروشگاه خود نیاز دارید، در دستان شماست.</p>
+        <div class="features-tagline">✨ دقیق | سریع | آسان</div>
+        <a href="https://rubika.ir/taha_cs_2120" target="_blank" class="btn" style="font-size: 1.2rem; padding: 15px 40px;">همین حالا شروع کنید</a>
+    </section>
+
+    <section class="features-section" id="features">
+        <h2>چرا برنامه رویا؟</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="icon">🎯</span>
+                <h3>دقیق</h3>
+                <p>محاسبات مالی و انبارداری با بالاترین دقت ممکن، بدون هیچ خطای انسانی.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">⚡</span>
+                <h3>سریع</h3>
+                <p>سرعت بالا در پردازش اطلاعات و صدور فاکتور، مناسب برای فروشگاه‌های پرترافیک.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">✨</span>
+                <h3>آسان</h3>
+                <p>رابط کاربری ساده و روان، بدون نیاز به دانش تخصصی حسابداری. همه چیز در دستان شماست.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>برای خرید، دریافت مشاوره یا پشتیبانی با ما در ارتباط باشید:</p>
+        <a href="https://rubika.ir/taha_cs_2120" target="_blank" class="social-link">@taha_cs_2120</a>
+        <p style="margin-top: 20px; font-size: 0.9rem;">&copy; ۲۰۲۴ برنامه رویا. تمامی حقوق محفوظ است.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
